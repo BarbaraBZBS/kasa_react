@@ -1,4 +1,4 @@
-import Router from "./components/Routes";
+import Router from './components/Routes';
 
 function App() {
     return <div className="App">
