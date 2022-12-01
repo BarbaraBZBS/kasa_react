@@ -1,15 +1,17 @@
-import MImg from '../../assets/M_Home_IMG.jpg'
-import DImg from '../../assets/D_Home_IMG.jpg'
+import MImg from '../../assets/M_H_Mask_Group.jpg'
+import DImg from '../../assets/D_H_Mask_Group.jpg'
 
 export default function Banner() {
-    return <div>
-        <picture>
-            <source media="(max-width: 480px)" srcSet={ MImg } />
-            <source media="(min-width: 481px)" srcSet={ DImg } />
-            <img src={ DImg } alt="nature" />
+    return <div className='bannerImgContainer'>
+        <picture className='bannerPic'>
+            <source media="(max-width: 419px)" srcSet={ MImg } />
+            <source media="(min-width: 420px)" srcSet={ DImg } />
+            <img className='bannerDImg' src={ DImg } alt="nature" />
         </picture>
-        <div>
-            <h1>Chez vous, partout et ailleurs</h1>
-        </div>
+
+        <h1 className='bannerTitle'>Chez vous,&nbsp;
+            <span className='bannerSpan'>partout et ailleurs</span>
+        </h1>
+
     </div>
 }

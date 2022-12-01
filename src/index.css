@@ -55,6 +55,46 @@
     .footerInfo {
         @apply text-white h-[46px] flex items-end justify-center
     }
+
+    .bannerImgContainer {
+        @apply flex relative w-[94%] min-h-[111px] min-w-[247px] max-w-[545px] mx-auto self-center
+    }
+
+    /* .bannerPic {
+        @apply mx-auto
+    } */
+
+    .bannerDImg {
+        @apply rounded-[10px] w-full h-full
+    }
+
+    .bannerTitle {
+        @apply text-white text-2xl leading-6 w-[217px] h-12 absolute left-[47%] top-1/2 translate-x-[-50%] translate-y-[-50%] min-[556px]:w-[80%] min-[556px]:left-[52%]
+    }
+
+    .bannerSpan {
+        @apply inline-block
+    }
+
+    .h-mainContainer {
+        @apply mx-5 my-4 flex flex-col
+    }
+
+    .homeSection {
+        @apply my-[22px] flex flex-col items-center
+    }
+
+    .cardContainer {
+        @apply h-[255px] relative max-w-[545px] mb-5 bg-cover rounded-[10px] flex my-auto min-w-[247px] w-[94%] bg-gradient-to-t from-transparent to-gray-400
+    }
+
+    .cardTitle {
+        @apply absolute text-white text-lg font-medium leading-[142.6%] max-w-[295.59px] h-[52px] bottom-1 left-3
+    }
+
+    .cardImg {
+        @apply rounded-[10px] w-full h-full object-cover absolute mix-blend-overlay
+    }
 }
 
 @layer base {

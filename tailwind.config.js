@@ -62,5 +62,8 @@ module.exports = {
             appdgrey: '#C4C4C4'
         }
     },
+    screens: {
+
+    },
     plugins: [],
 }

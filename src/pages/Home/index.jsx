@@ -1,10 +1,11 @@
-import Banner from "../../components/Banner"
+import Banner from '../../components/Banner'
+import Card from '../../components/card'
 
 export default function Home() {
-    return <main>
+    return <main className="h-mainContainer">
         <Banner />
-        <section>
-
+        <section className='homeSection'>
+            <Card />
         </section>
     </main>
 }
