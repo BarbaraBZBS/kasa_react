@@ -4,8 +4,8 @@ import DLogo from '../../assets/D_Head_LOGO.png';
 
 export default function Header() {
     return <header>
-        <nav>
-            <div>
+        <nav className='headerContainer'>
+            <div className='logoNav'>
                 <NavLink to="/">
                     <picture>
                         <source media="(max-width: 480px)" srcSet={ MLogo } />
@@ -14,20 +14,25 @@ export default function Header() {
                     </picture>
                 </NavLink>
             </div>
-            <ul>
-                <li>
-                    <NavLink to="/" className={ ( { isActive } ) => {
-                        return ( 'navLk' + ( isActive ? 'activeLk' : 'inactiveLk' ) )
-                    } }>
-                        <p>Accueil</p>
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink to="/About">
-                        <p>À Propos</p>
-                    </NavLink>
-                </li>
-            </ul>
+            <div className='navContainer'>
+                <ul className='navList'>
+                    <li>
+                        <NavLink to="/" className={ ( { isActive } ) => {
+                            return ( ( isActive ? 'navLk activeLk' : 'navLk inactiveLk' ) )
+                        } }>
+                            Accueil
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/About" className={ ( { isActive } ) => {
+                            return ( ( isActive ? 'navLk activeLk' : 'navLk' ) )
+                        } }>
+                            À Propos
+                        </NavLink>
+                    </li>
+                </ul>
+
+            </div>
         </nav>
     </header>
 }
