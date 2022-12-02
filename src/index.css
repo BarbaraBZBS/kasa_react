@@ -60,10 +60,6 @@
         @apply flex relative w-[94%] min-h-[111px] min-w-[247px] max-w-[545px] mx-auto self-center
     }
 
-    /* .bannerPic {
-        @apply mx-auto
-    } */
-
     .bannerDImg {
         @apply rounded-[10px] w-full h-full
     }
@@ -94,6 +90,33 @@
 
     .cardImg {
         @apply rounded-[10px] w-full h-full object-cover absolute mix-blend-overlay
+    }
+    .aboutContainer {
+        @apply flex flex-col m-5 min-h-[76vh]
+    }
+    .collapse {
+        @apply mb-5 
+    }
+    .collapseBtn {
+        @apply rounded-[5px] text-[13px] text-white bg-appred h-[30px] w-full mx-auto flex flex-row justify-between
+    }
+    .collapseBtn p {
+        @apply p-[6px] leading-[142.6%] ml-[5px]
+    }
+    .chevron {
+        @apply p-[6px] self-center mr-[11px]
+    }
+    .contentParent {
+        @apply h-0 overflow-hidden transition-[height] duration-[900ms]
+    }
+    .content {
+        @apply bg-applgrey rounded-bl-[5px] rounded-br-[5px] pt-[17px] pb-[52px] pr-[12px] pl-[8px]
+    }
+    .aBannerImgContainer {
+        @apply flex h-[223px] max-w-[545px] mx-auto self-center mb-5
+    }
+    .aBannerDImg {
+        @apply rounded-[10px] w-full h-full object-cover
     }
 }
 

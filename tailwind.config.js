@@ -39,6 +39,9 @@ module.exports = {
                 spin: 'spin infinite 1.3s linear',
                 scale: 'scale 1s ease forwards',
                 fill: 'fill .1s forwards',
+            },
+            transitionProperty: {
+                'height': 'height',
             }
         },
         fontFamily: {
@@ -62,8 +65,6 @@ module.exports = {
             appdgrey: '#C4C4C4'
         }
     },
-    screens: {
 
-    },
     plugins: [],
 }
