@@ -61,6 +61,7 @@ module.exports = {
             yellow: colors.amber,
             green: colors.lime,
             applgrey: '#F7F7F7',
+            appgrey: '#E3E3E3',
             appred: '#FF6060',
             appdgrey: '#C4C4C4'
         }

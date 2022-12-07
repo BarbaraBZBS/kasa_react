@@ -110,13 +110,73 @@
         @apply h-0 overflow-hidden transition-[height] duration-[900ms]
     }
     .content {
-        @apply bg-applgrey rounded-bl-[5px] rounded-br-[5px] pt-[17px] pb-[52px] pr-[12px] pl-[8px]
+        @apply bg-applgrey rounded-bl-[5px] rounded-br-[5px] pt-[17px] pb-[30px] pr-[12px] pl-[8px]
     }
     .aBannerImgContainer {
         @apply flex h-[223px] max-w-[545px] mx-auto self-center mb-5
     }
     .aBannerDImg {
         @apply rounded-[10px] w-full h-full object-cover
+    }
+    .slideContainer {
+        @apply max-w-[335px] h-[255px] my-0 mx-auto
+    }
+    .slide {
+        @apply w-full h-full rounded-[10px] bg-center bg-cover
+    }
+    .slider {
+        @apply h-full relative
+    }
+    .leftArrow {
+        @apply absolute top-[45%] -translate-x-2/4 left-[16px] w-[24px] h-[24px] text-white z-[1] cursor-pointer
+    }
+    .rightArrow {
+        @apply absolute top-[45%] -translate-x-2/4 -right-[6px] w-[24px] h-[24px] text-white z-[1] cursor-pointer
+    }
+    .numOfSlides {
+        @apply hidden absolute top-[88%] left-[48%] text-white
+    }
+    .flatImg {
+        @apply w-full h-full rounded-[10px]
+    }
+    .flatTitle {
+        @apply text-[18px]
+    }
+    .flatMainContainer {
+        @apply mx-5
+    }
+    .infoContainer {
+        @apply mt-[15px]
+    }
+    .flatLocation {
+        @apply text-[14px]
+    }
+    .tagsContainer {
+        @apply flex flex-row flex-wrap
+    }
+    .tags {
+        @apply bg-appred rounded-[5px] text-white text-center text-[10px] min-w-[84px] py-[1.5px] mr-[10px] my-[10px]
+    }
+    .starsContainer {
+        @apply w-[98px] h-[18px]
+    }
+    .activeStar {
+        @apply w-[15px] h-[15px] mr-[4px]
+    }
+    .inactiveStar {
+        @apply w-[15px] h-[15px] text-appgrey mr-[4px]
+    }
+    .starsHostContainer {
+        @apply flex flex-row justify-between mb-[15px] items-center
+    }
+    .host {
+        @apply flex flex-row w-[135px] h-[33px] justify-end
+    }
+    .hostName {
+        @apply max-w-[72px] w-[50px] h-[33px] text-xs text-right flex flex-wrap
+    }
+    .hostPic {
+        @apply w-8 h-8 rounded-2xl ml-[10.5px]
     }
 }
 

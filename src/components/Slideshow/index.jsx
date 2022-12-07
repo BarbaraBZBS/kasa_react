@@ -1,16 +1,29 @@
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
-import data from '../../data/logements.json'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-export default function Slideshow() {
-    const { id } = useParams()
-    const [ flatData ] = useState( data.find( ( flat ) => flat.id === id ) )
 
-    return <div>
-        { flatData.pictures.map( ( pic, index ) => {
-            return <img src={ pic[ index ] } alt={ flatData.title } />
-        } ) }
-        <img src={ flatData.pictures } alt={ flatData.title } />
-    </div>
+export default function Slideshow( { slides } ) {
+    const [ currentIndex, setCurrentIndex ] = useState( 0 )
+    const goToPrevious = () => {
+        const isFirstSlide = currentIndex === 0
+        const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1
+        setCurrentIndex( newIndex )
+    }
+    const goToNext = () => {
+        const isLastSlide = currentIndex === slides.length - 1
+        const newIndex = isLastSlide ? 0 : currentIndex + 1
+        setCurrentIndex( newIndex )
+    }
+
+    return <div className='slider'>
+        <FontAwesomeIcon icon={ faChevronLeft } className='leftArrow' onClick={ goToPrevious } />
+        <FontAwesomeIcon icon={ faChevronRight } className='rightArrow' onClick={ goToNext } />
+        <div className='slide'
+            style={ { backgroundImage: `url(${ slides[ currentIndex ] })` } }>
+        </div>
+        <div className='numOfSlides'>{ currentIndex + 1 }/{ slides.length }</div>
+    </div >
 }
