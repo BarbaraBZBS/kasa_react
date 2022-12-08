@@ -9,27 +9,32 @@
     }
 
     .navLk {
-        @apply text-appred ml-[10px] uppercase text-xs
+        @apply text-appred ml-[10px] uppercase text-xs 
+        sm:text-[17px] sm:ml-[30px]
     }
 
     .errContainer {
-        @apply max-w-screen-sm text-center flex flex-col align-middle px-[57px]
+        @apply max-w-screen-sm text-center flex flex-col align-middle px-[57px] mx-auto
     }
 
     .errTitle {
         @apply text-8xl font-bold align-middle leading-[142.6%] mb-[11px] mt-[195px]
+        sm:text-[130px] sm:mt-[120px] sm:mb-[30px]
     }
 
     .errP {
         @apply font-medium text-lg leading-[142.6%] mb-[133px]
+        sm:text-[25px] sm:mb-[140px]
     }
 
     .errHLk {
         @apply leading-[142.6%] mb-[235px] text-sm underline
+        sm:text-[18px] sm:mb-[140px]
     }
 
     .headerContainer {
-        @apply flex flex-row m-5 justify-between
+        @apply flex flex-row m-5 justify-between items-center 
+        sm:mx-[45px]
     }
 
     .logoNav {
@@ -54,38 +59,50 @@
 
     .footerInfo {
         @apply text-white h-[46px] flex items-end justify-center
+        sm:text-xl
     }
 
     .bannerImgContainer {
-        @apply flex relative w-[94%] min-h-[111px] min-w-[247px] max-w-[545px] mx-auto self-center
+        @apply flex relative w-[94%] h-[111px] min-w-[247px] self-center
+        sm:h-[170px]
     }
 
     .bannerDImg {
         @apply rounded-[10px] w-full h-full
+        sm:rounded-[20px]
     }
 
     .bannerTitle {
-        @apply text-white text-2xl leading-6 w-[217px] h-12 absolute left-[47%] top-1/2 translate-x-[-50%] translate-y-[-50%] min-[556px]:w-[80%] min-[556px]:left-[52%]
+        @apply text-white text-2xl leading-6 w-[217px] h-12 absolute left-[47%] top-1/2 translate-x-[-50%] translate-y-[-50%]
+        sm:w-[374px] sm:left-[50%] sm:top-[58%] sm:text-[30px]
     }
 
     .bannerSpan {
         @apply inline-block
     }
 
-    .h-mainContainer {
-        @apply mx-5 my-4 flex flex-col
+    .homeMainContainer {
+        @apply mx-5 my-4 flex flex-col 
+        sm:mx-[45px]
     }
 
     .homeSection {
         @apply my-[22px] flex flex-col items-center
+        sm:my-[35px] sm:flex-row sm:flex-wrap sm:bg-applgrey rounded-[20px]
+    }
+    .card {
+        @apply mx-auto w-[94%]
+        sm:w-[230px]
     }
 
     .cardContainer {
-        @apply h-[255px] relative max-w-[545px] mb-5 bg-cover rounded-[10px] flex my-auto min-w-[247px] w-[94%] bg-gradient-to-t from-transparent to-gray-400
+        @apply h-[255px] relative max-w-[545px] mb-5 bg-cover rounded-[10px] flex my-auto min-w-[247px] bg-gradient-to-t from-transparent to-gray-400
+        sm:my-[30px] sm:mx-[10px] sm:min-h-[216px] sm:min-w-[216px] sm:max-h-[340px] sm:max-w-[340px] sm:w-[230px] sm:h-[230px]
     }
 
     .cardTitle {
         @apply absolute text-white text-lg font-medium leading-[142.6%] max-w-[295.59px] h-[52px] bottom-1 left-3
+        sm:h-auto
     }
 
     .cardImg {

@@ -14,9 +14,6 @@ export default function Banner() {
         if ( window.location.pathname === '/About' ) {
             setCurrentPage( 'about' )
         }
-        if ( window.location.pathname === '/Apartment' ) {
-            setCurrentPage( 'apartment' )
-        }
     }, [] )
 
     return <>
