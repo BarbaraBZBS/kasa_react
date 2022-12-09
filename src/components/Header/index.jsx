@@ -24,7 +24,7 @@ export default function Header() {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/About" className={ ( { isActive } ) => {
+                        <NavLink to="/about" className={ ( { isActive } ) => {
                             return ( ( isActive ? 'navLk activeLk' : 'navLk' ) )
                         } }>
                             À Propos

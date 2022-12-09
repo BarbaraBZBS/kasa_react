@@ -23,47 +23,61 @@ export default function Apartment() {
                 <img src={ flatData.cover } alt={ flatData.title } className='flatImg' />
             }
         </div>
-        <div className='infoContainer'>
-            <h1 className='flatTitle'>{ flatData.title }</h1>
-            <h2 className='flatLocation'>{ flatData.location }</h2>
-            <div className='tagsContainer'>
-                { flatData.tags && flatData.tags.map( ( tag, index ) => (
-                    <p className='tags'
-                        key={ `${ tag }-${ index }` }>{ [ tag ] }</p>
-                ) ) }
-            </div>
-            <div className='starsHostContainer'>
-                <div className='starsContainer'>
-                    { [ ...new Array( totalStars ) ].map( ( arr, index ) => {
-                        return index < activeStars ?
-                            <FontAwesomeIcon
-                                icon={ faStar }
-                                key={ `${ arr }-${ index }` }
-                                className='activeStar'
-                            /> :
-                            <FontAwesomeIcon
-                                icon={ faStar }
-                                key={ `${ arr }-${ index }` }
-                                className='inactiveStar'
-                            />
-                    } ) }
-                </div>
-                <div key={ flatData.host.name } className='host'>
-                    <p className='hostName'>{ flatData.host.name }</p>
-                    <img className='hostPic' src={ flatData.host.picture } alt={ flatData.host.name } />
-                </div>
-            </div>
-            <Collapse label="Description">
-                <p>{ flatData.description }</p>
-            </Collapse>
-            <Collapse label="Équipements">
-                { flatData.equipments && flatData.equipments.map( ( equip, index ) => (
-                    <div>
-                        <p key={ `${ equip }-${ index }` }>{ [ equip ] }</p>
+        <div className='flatDetails'>
+            <div className='infoContainer'>
+                <div className='flatInfo'>
+                    <h1 className='flatTitle'>{ flatData.title }</h1>
+                    <h2 className='flatLocation'>{ flatData.location }</h2>
+                    <div className='tagsContainer'>
+                        { flatData.tags && flatData.tags.map( ( tag, index ) => (
+                            <p className='tags'
+                                key={ `${ tag }-${ index }` }>{ [ tag ] }</p>
+                        ) ) }
                     </div>
-                )
-                ) }
-            </Collapse>
+                </div>
+                <div className='starsAndHostContainer'>
+                    <div className='starsContainer'>
+                        { [ ...new Array( totalStars ) ].map( ( arr, index ) => {
+                            return index < activeStars ?
+                                <FontAwesomeIcon
+                                    icon={ faStar }
+                                    key={ `${ arr }-${ index }` }
+                                    className='activeStar'
+                                /> :
+                                <FontAwesomeIcon
+                                    icon={ faStar }
+                                    key={ `${ arr }-${ index }` }
+                                    className='inactiveStar'
+                                />
+                        } ) }
+                    </div>
+                    <div key={ flatData.host.name } className='host'>
+                        <div className='hostNameContainer'>
+                            <p className='hostName'>{ flatData.host.name }</p>
+                        </div>
+                        <div className='hostPicContainer'>
+                            <img className='hostPic' src={ flatData.host.picture } alt={ flatData.host.name } />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className='flatCollapseContainer'>
+                <div className='flatDescripCollapse'>
+                    <Collapse label="Description">
+                        <p>{ flatData.description }</p>
+                    </Collapse>
+                </div>
+                <div className='flatEquipCollapse'>
+                    <Collapse label="Équipements">
+                        { flatData.equipments && flatData.equipments.map( ( equip, index ) => (
+                            <div>
+                                <p key={ `${ equip }-${ index }` }>{ [ equip ] }</p>
+                            </div>
+                        )
+                        ) }
+                    </Collapse>
+                </div>
+            </div>
         </div>
     </main>
 }
