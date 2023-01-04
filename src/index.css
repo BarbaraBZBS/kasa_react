@@ -72,6 +72,7 @@
     .bannerImgContainer {
         @apply flex relative w-[94%] h-[111px] min-w-[247px] self-center
         sm:h-[223px] sm:w-full
+        lg:max-w-[1240px] lg:mx-auto
     }
 
     .bannerDImg {
@@ -81,7 +82,7 @@
 
     .bannerTitle {
         @apply text-white text-2xl leading-6 w-[217px] h-12 absolute left-[47%] top-1/2 translate-x-[-50%] translate-y-[-50%]
-        sm:w-[374px] sm:left-[50%] sm:top-[54%] sm:text-[30px]
+        sm:w-[374px] sm:left-[50%] sm:top-[54%] sm:text-[30px] sm:tracking-[-0.024em]
         md:w-[442px] md:text-[36px]
         lg:text-[48px] lg:w-[588px]
     }
@@ -93,12 +94,14 @@
     .homeMainContainer {
         @apply mx-5 my-4 flex flex-col 
         sm:mx-[50px]
+        lg:mx-[100px]
     }
 
     .homeSection {
         @apply my-[22px] flex flex-col items-center
         sm:my-[35px] sm:flex-row sm:flex-wrap sm:bg-applgrey rounded-[20px]
         md:my-[43px]
+        lg:max-w-[1240px] lg:mx-auto
     }
     .card {
         @apply mx-auto w-[94%]
@@ -125,6 +128,7 @@
     .aboutContainer {
         @apply flex flex-col m-5 min-h-[76vh]
         sm:mx-[50px]
+        lg:mx-[100px]
     }
     .collapse {
         @apply mb-5
@@ -143,6 +147,7 @@
     .collapseBtnAp {
         @apply rounded-[5px] text-[13px] text-white bg-appred h-[30px] w-full mx-auto flex flex-row justify-between
         sm:text-[17px] sm:h-[52px]
+        lg:rounded-[10px]
     }
     .collapseBtnAp p {
         @apply p-[6px] leading-[142.6%] ml-[5px]
@@ -155,18 +160,19 @@
         @apply h-0 overflow-hidden transition-[height] duration-[900ms]
     }
     .contentAb {
-        @apply bg-applgrey rounded-bl-[5px] rounded-br-[5px] pt-[17px] pb-[30px] pr-[12px] pl-[8px] min-h-[144px] text-[12px]
+        @apply bg-applgrey rounded-[5px] pt-[17px] pb-[30px] pr-[12px] pl-[8px] min-h-[144px] text-[12px]
         sm:pr-[18px] sm:pl-[27px] sm:pb-0 sm:pt-[27px] sm:min-h-full sm:rounded-br-[10px] sm:rounded-bl-[10px] sm:text-[17px]
         lg:text-[24px]
     }
     .contentAp {
-        @apply bg-applgrey rounded-bl-[5px] rounded-br-[5px] pt-[17px] h-full pr-[8px] pl-[12px] min-h-[144px] text-[12px]
+        @apply bg-applgrey rounded-[5px] pt-[17px] h-full pr-[8px] pl-[12px] min-h-[144px] text-[12px]
         sm:pr-[12px] sm:pl-[20px] sm:pb-[27px] sm:pt-[30px] sm:rounded-br-[10px] sm:rounded-bl-[10px] sm:text-[15px] sm:min-h-[310px]
-        lg:text-[18px] lg:min-h-[245px]
+        lg:text-[18px] lg:min-h-[245px] lg:rounded-[10px]
     }
     .aBannerImgContainer {
         @apply flex h-[223px] max-w-[545px] mx-auto self-center mb-5
         sm:max-w-none
+        lg:mb-[31px]
     }
     .aBannerDImg {
         @apply rounded-[10px] w-full h-full object-cover
@@ -177,6 +183,7 @@
     }
     .slide {
         @apply w-full h-full rounded-[10px] bg-center bg-cover
+        lg:rounded-[25px]
     }
     .slider {
         @apply h-full relative
@@ -205,6 +212,7 @@
     .flatMainContainer {
         @apply mx-5
         sm:mx-[50px]
+        lg:mx-[100px]
     }
     .flatDetails {
         @apply mt-[15px]
@@ -221,7 +229,7 @@
     .tags {
         @apply bg-appred rounded-[5px] text-white text-center text-[10px] min-w-[84px] py-[1.5px] px-[4.5px] mr-[10px] my-[10px]
         sm:mt-[20px] sm:mb-[24px] sm:text-[13px]
-        lg:text-[14px]
+        lg:text-[14px] lg:h-[25px] lg:w-[115px] lg:rounded-[10px]
     }
     .starsContainer {
         @apply w-[98px] h-[18px]
@@ -277,6 +285,9 @@
 
 @layer base {
     body {
-        @apply text-appred font-txt
+        @apply text-appred font-txt w-full
+    }
+    html {
+        @apply w-full
     }
 }

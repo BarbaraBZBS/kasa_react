@@ -24,7 +24,8 @@ export default function Banner() {
                     <source media="(min-width: 420px)" srcSet={ DImg } />
                     <img className='bannerDImg' src={ DImg } alt="nature" />
                 </picture>
-                <h1 className='bannerTitle'>Chez vous,&nbsp;
+                <h1 className='bannerTitle'>
+                    <span className='bannerSpan'>Chez vous,&nbsp;</span>
                     <span className='bannerSpan'>partout et ailleurs</span>
                 </h1>
             </div>
