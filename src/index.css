@@ -160,13 +160,13 @@
         @apply h-0 overflow-hidden transition-[height] duration-[900ms]
     }
     .contentAb {
-        @apply bg-applgrey rounded-[5px] pt-[17px] pb-[30px] pr-[12px] pl-[8px] min-h-[144px] text-[12px]
-        sm:pr-[18px] sm:pl-[27px] sm:pb-0 sm:pt-[27px] sm:min-h-full sm:rounded-br-[10px] sm:rounded-bl-[10px] sm:text-[17px]
+        @apply bg-applgrey rounded-[5px] pt-[37px] pb-[30px] pr-[12px] pl-[8px] min-h-[144px] text-[12px]
+        sm:pr-[18px] sm:pl-[27px] sm:pb-0 sm:pt-[47px] sm:min-h-full sm:rounded-br-[10px] sm:rounded-bl-[10px] sm:text-[17px]
         lg:text-[24px]
     }
     .contentAp {
-        @apply bg-applgrey rounded-[5px] pt-[17px] h-full pr-[8px] pl-[12px] min-h-[144px] text-[12px]
-        sm:pr-[12px] sm:pl-[20px] sm:pb-[27px] sm:pt-[30px] sm:rounded-br-[10px] sm:rounded-bl-[10px] sm:text-[15px] sm:min-h-[310px]
+        @apply bg-applgrey rounded-[5px] pt-[38px] h-full pr-[8px] pl-[12px] min-h-[144px] text-[12px]
+        sm:pr-[12px] sm:pl-[20px] sm:pb-[27px] sm:pt-[50px] sm:rounded-br-[10px] sm:rounded-bl-[10px] sm:text-[15px] sm:min-h-[310px]
         lg:text-[18px] lg:min-h-[245px] lg:rounded-[10px]
     }
     .aBannerImgContainer {
